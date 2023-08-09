@@ -16,7 +16,16 @@ longest sub array = [2,3,5] so return 3
 
 check for all sub arrays and compare sum with given k and store length and at last return this length.
 
+Complexity:  
+time: O(n*n)  
+space: O(1)
+
 ### 2. Use prefix sum approach with hashmap   
+
+Complexity:  
+time: O(n)  
+space: O(N) storing every elements in hashamap
+
 
 ![Alt text](/images_arr/prefixSum.png)
 
@@ -45,6 +54,10 @@ func longestSubArray(_ nums: [Int], k: Int) {
 
 
 ## if array contains only positives and zero then we have one more optimal appraoch that is two pointer approach 
+
+Complexity:  
+time: O(2n) ~ O(n)  
+space: O(1)
 
 Example :   
 longestSubArrayWithPositvesAndZero([2,3,5,1,9], k: 10)  
