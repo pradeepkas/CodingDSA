@@ -11,6 +11,7 @@ given arrays are sorted
 
 ## two pointers approach 
 
+```markdown
 //1,2,3,4,5,6,7,8,9,10  
 //2,3,4,4,5,11,12
 
@@ -18,7 +19,7 @@ Common Elements in arr1 and arr2  are:  2,3,4,5
 Distnict Elements in arr1 are : 1,6,7,8,9,10  
 Distnict Elemennts in arr2 are : 11,12   
 Union of arr1 and arr2 is {1,2,3,4,5,6,7,8,9,10,11,12} 
-
+```
 
 ```swift
 func unionTwoArr(n1: [Int], n2: [Int]) {

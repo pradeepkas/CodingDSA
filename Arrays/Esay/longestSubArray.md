@@ -7,10 +7,11 @@
 
 ## sloutions 
 
+```markdown
 example : [2,3,5,1,9], k = 10  
 exist sub array = [2,3,5] [1,9]  
 longest sub array = [2,3,5] so return 3
-
+```
 
 ### 1. Brute force one   
 
@@ -59,15 +60,16 @@ Complexity:
 time: O(2n) ~ O(n)  
 space: O(1)
 
+```markdown
 Example :   
 longestSubArrayWithPositvesAndZero([2,3,5,1,9], k: 10)  
 o/p :       
-`sub array from first to last 0 and 2`  
-`sub array from first to last 3 and 4`
+sub array from first to last 0 and 2  
+sub array from first to last 3 and 4
 
 longestSubArrayWithPositvesAndZero([2,0,0,3], k: 3)   
-`sub array from first to last 1 and 3`
-
+sub array from first to last 1 and 3
+```
 
 ```swift
 func longestSubArrayWithPositvesAndZero(_ nums: [Int], k: Int) {

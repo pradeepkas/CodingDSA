@@ -21,6 +21,7 @@ func sortColors(_ nums: inout [Int]) {
     var low = 0
     var mid = 0
     var high = nums.count - 1
+    
     while( mid <= high) {
         
         if nums[mid] == 0 {

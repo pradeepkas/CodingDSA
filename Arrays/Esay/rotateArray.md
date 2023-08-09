@@ -2,12 +2,14 @@
 
 first you have make d in range of array means :
 
+```markdown
 if d = 8 and n = 3 
 then d = 8 % 3 = 2
 
 if d = 1 and n = 3 
 then d = 1 % 3 = 1
 
+```
 ## bettter one
 
 1. take first d element in temp array 

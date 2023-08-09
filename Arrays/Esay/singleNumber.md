@@ -1,10 +1,11 @@
 ## singleNumber
 measns single occurence,  all other elements will be there twice.
 
+```markdown
 example:   
 [4,1,2,1,2]  
 ans : 4
-
+```
 1. using hashmap
 2. using set
 3. using XOR 

@@ -2,9 +2,10 @@
 
 ## removeDuplicates from sorted in non-decreasing order array
 
+```markdown
 Input: arr[1,1,2,2,2,3,3]  
 Output: arr[1,2,3,_,_,_,_]
-
+```
 - we can use index and index + 1 to make, but here we are playing with lots of index.
 
 ```swift
