@@ -15,9 +15,9 @@ then d = 1 % 3 = 1
 3. add temp array into main one to end
 
 
-![Alt text](/images/image.png)
+![Alt text](/images_arr/image.png)
 
 
 ## Optimal one
 
-![Alt text](/images/imageoptimal.png)
+![Alt text](/images_arr/imageoptimal.png)

@@ -1,0 +1,80 @@
+## Longest Subarray with sum K
+
+
+## 1. Longest Subarray with sum K | [Postives and Negatives] with zero as well 
+
+> This sloution will work on `prefix sum` approach
+
+## sloutions 
+
+example : [2,3,5,1,9], k = 10  
+exist sub array = [2,3,5] [1,9]  
+longest sub array = [2,3,5] so return 3
+
+
+### 1. Brute force one   
+
+check for all sub arrays and compare sum with given k and store length and at last return this length.
+
+### 2. Use prefix sum approach with hashmap   
+
+![Alt text](/images_arr/prefixSum.png)
+
+```swift
+func longestSubArray(_ nums: [Int], k: Int) {
+    var dictForPrefixSum = [Int: Int]()
+    var currentSum = 0    
+    for index in 0..<nums.count {
+        let ele = nums[index]
+        currentSum += ele
+        if currentSum == k {
+            print("sub array \(index + 1)")
+        } else {
+            if let value = dictForPrefixSum[currentSum - k] {
+                print("sub array len \(index - value)")
+                //printSubArray(value, end: index)
+            }
+        }
+        // to get negtive consideration --- to get as left as possible for example [2,0,0,3] and max length subarray is [0,0,3] with k = 3
+        if dictForPrefixSum[currentSum] == nil {
+            dictForPrefixSum[currentSum] = index
+        }
+    }
+}
+```
+
+
+## if array contains only positives and zero then we have one more optimal appraoch that is two pointer approach 
+
+Example :   
+longestSubArrayWithPositvesAndZero([2,3,5,1,9], k: 10)  
+o/p :       
+`sub array from first to last 0 and 2`  
+`sub array from first to last 3 and 4`
+
+longestSubArrayWithPositvesAndZero([2,0,0,3], k: 3)   
+`sub array from first to last 1 and 3`
+
+
+```swift
+func longestSubArrayWithPositvesAndZero(_ nums: [Int], k: Int) {
+    var p1 = 0
+    var p2 = 0
+    
+    var sum = 0
+    while (p1 < nums.count) {
+        sum += nums[p1]
+        while ( sum > k && p2 < p1 ) {
+            sum -= nums[p2]
+            p2 += 1
+        }
+        if sum == k {
+            print("sub array from first to last \(p2) and \(p1)")
+        }
+        p1 += 1
+    }
+}
+
+```
+
+![Alt text](/images_arr/prefixSumwithPostive&zero.png)
