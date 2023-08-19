@@ -35,5 +35,4 @@ func generatePascalRow(_ row: Int) {
 
 ```
 
-
 ![Alt text](/images_arr/pascal.png)
