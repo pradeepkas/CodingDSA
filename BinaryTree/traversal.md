@@ -1,5 +1,7 @@
 ## Traversal
 
+## whenever you are standing at node just check for that and then conitinue with left and right in recursion way
+
 ```markdown
 inorder : LNR
 preorder: NLR
