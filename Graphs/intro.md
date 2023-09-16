@@ -24,3 +24,11 @@ undirected Graph
 total degree of graph = 2 * E (E: edge)
 ```
 > in directed graph there will be indirected and outdireced degreee (means incoming and outgoing edges respectively)
+
+
+## visting 
+
+-> we have to maintain visited array to maintain traversal
+so that we can mark once its visited
+
+
