@@ -13,8 +13,8 @@ so total filled water will be like this === (j-i) * min (arr[j], arr[i])
 ```
 
 ## 1 brute force 
-with two loops 
-//will check for every container with others  
+with two loops   
+will check for every container with others  
 
 ```swift
 func bruteForceForMaxWater(_ arr: [Int]) {
