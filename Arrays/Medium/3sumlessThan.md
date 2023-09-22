@@ -34,7 +34,7 @@ func threeSomeWithLessThanSumProblem() {
 
 1. first we have sort the data 
 2. then pointer based approach 
-3. and <= check for more data
+3. and >= check for more data
 4. (k-j) check please check SS
 
 ```swift
