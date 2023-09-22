@@ -2,7 +2,7 @@
 
 ### Problem Statement: Given an array of non-negative integers representation elevation of ground. Your task is to find the water that can be trapped after rain.
 
-![Alt text](image.png)
+![Alt text](./images/image.png)
 
 ```markdown
 Input: height= [0,1,0,2,1,0,1,3,2,1,2,1]
