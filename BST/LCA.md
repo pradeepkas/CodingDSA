@@ -1,7 +1,7 @@
 ## LCA in Binary Search Tree
 
 
-![Alt text](./LCA.png)
+![Alt text](./BSTimage/LCA.png)
 
 ```swift
 func lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
