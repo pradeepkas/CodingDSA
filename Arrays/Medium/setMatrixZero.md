@@ -13,43 +13,71 @@ time :  O(n*m) * O(n+m) + O(n*m) ~= O(N*3)
 space : O(1)
 ```
 
+## 2. better one force one 
+
+with extraa space and maintinning Int.Min at place of zeros
+
 ```swift
 //[[1,1,1],[1,0,1],[1,1,1]]
-func setMatricZero(_ nums: inout [[Int]]) {
-    let rows = nums.count
-    let col = nums[0].count
-    print(nums)
-    for i in 0..<rows { // O(n*m)
-        for j in 0..<col {
-            if nums[i][j] == 0 {
-                setStarForRow(i) //O(n+m)
-                setStarForCol(j)
-            }
+    func setMatrixZero(_ matrix: inout [[Int]]) {
+        guard !matrix.isEmpty, let numCols = matrix.first?.count else {
+            print("Matrix is empty or invalid")
+            return
         }
-    }
-    //print(nums)
-    func setStarForRow(_ row: Int) {
-        for index in 0..<col {
-            if nums[row][index] != 0 {
-                nums[row][index] = -1
-            }
-        }
-    }
-    func setStarForCol(_ col: Int) {
-        for index in 0..<rows {
-            if nums[index][col] != 0 {
-                nums[index][col] = -1
-            }
-        }
-    }
-    // at last now replace -1 to 0 as well 
-    //O(n*m)
-}
 
+        let numRows = matrix.count
+        print("Matrix dimensions: \(numRows) x \(numCols)")
+        print("Initial matrix: \(matrix)")
+
+        var zeroPositions: [(row: Int, col: Int)] = []
+
+        // Step 1: Identify zeros and mark with Int.min
+        for row in 0..<numRows {
+            for col in 0..<numCols {
+                if matrix[row][col] == 0 {
+                    matrix[row][col] = Int.min
+                    zeroPositions.append((row, col))
+                }
+            }
+        }
+        // O(N*M)
+
+        // Step 2: Set corresponding rows and columns to zero
+        for row in 0..<numRows {
+            for col in 0..<numCols {
+                if matrix[row][col] == Int.min {
+                    zeroEntireRow(row, numCols)
+                    zeroEntireColumn(col, numRows)
+                }
+            }
+        }
+        // (n * m) * (n+m)
+
+        // Step 3: Restore Int.min back to 0
+        for (row, col) in zeroPositions {
+            matrix[row][col] = 0
+        }
+
+        print("Final matrix: \(matrix)")
+
+        // Helper functions
+        func zeroEntireRow(_ row: Int, _ cols: Int) {
+            for col in 0..<cols {
+                if matrix[row][col] != Int.min {
+                    matrix[row][col] = 0
+                }
+            }
+        }
+
+        func zeroEntireColumn(_ col: Int, _ rows: Int) {
+            for row in 0..<rows {
+                if matrix[row][col] != Int.min {
+                    matrix[row][col] = 0
+                }
+            }
+        }
+    }
 ```
-
-
-## 2. better one force one 
 
 will use cols and rows array as extraa for decision purpose 
 
