@@ -53,5 +53,26 @@ func merge(_ arr: [[Int]]) -> [[Int]] {
 }
 ```
 
+```swift
+    func merge(_ intervals: [[Int]]) -> [[Int]] {
+        if intervals.isEmpty { return [] }
+        let sortedIntervals = intervals.sorted(by: { $0[0] < $1[0] })
+
+        var result = [sortedIntervals[0]]
+        
+        for index in 1..<sortedIntervals.count {
+            let current = sortedIntervals[index]
+            let last = result.last!
+            if last[1] >= current[0] {
+                result[result.count - 1][1] = max(last[1], current[1])
+            } else {
+                result.append(current)
+            }
+        }
+        print(result)
+        return result
+    }
+
+```
 
 ![Alt text](/images_arr/pairMerging.png)
