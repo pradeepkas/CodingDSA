@@ -80,3 +80,9 @@ https://leetcode.com/problems/binary-tree-right-side-view/description/?envType=s
 
 26.
 https://leetcode.com/problems/reverse-nodes-in-k-group/submissions/1759595906/?envType=study-plan-v2&envId=top-interview-150
+
+27 
+https://leetcode.com/problems/number-of-islands/?envType=study-plan-v2&envId=top-interview-150
+
+28 
+https://leetcode.com/problems/unique-paths-ii/?envType=study-plan-v2&envId=top-interview-150
